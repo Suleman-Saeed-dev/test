@@ -1,0 +1,136 @@
+.navbar {
+  background-color: var(--primary-light);
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  border-bottom: 1px solid var(--border-color);
+  transition: var(--transition);
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+  max-width: 1200px;
+  width: 100%;
+  padding: 0 var(--spacing-md);
+}
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.logo-text {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--primary-dark);
+  letter-spacing: -0.5px;
+}
+
+.nav-menu {
+  display: flex;
+  list-style: none;
+  text-align: center;
+  align-items: center;
+  gap: var(--spacing-md);
+}
+
+.nav-item {
+  height: 80px;
+  display: flex;
+  align-items: center;
+}
+
+.nav-link {
+  color: var(--text-dark);
+  text-decoration: none;
+  padding: 0.5rem 0;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  font-weight: 400;
+  position: relative;
+  letter-spacing: 0.3px;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 20px;
+  left: 0;
+  background-color: var(--accent-gold);
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 100%;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: var(--accent-gold);
+}
+
+.menu-icon {
+  display: none;
+  cursor: pointer;
+  color: var(--primary-dark);
+}
+
+@media screen and (max-width: 960px) {
+  .menu-icon {
+    display: block;
+  }
+
+  .nav-menu {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    top: 80px;
+    left: -100%;
+    opacity: 0;
+    transition: all 0.3s ease;
+    background-color: var(--primary-light);
+    padding: var(--spacing-md) 0;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    gap: 0;
+  }
+
+  .nav-menu.active {
+    left: 0;
+    opacity: 1;
+    transition: all 0.3s ease;
+    z-index: 1;
+  }
+
+  .nav-item {
+    width: 100%;
+    height: auto;
+    padding: var(--spacing-sm) 0;
+  }
+
+  .nav-link {
+    padding: var(--spacing-sm);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .nav-link::after {
+    display: none;
+  }
+}
