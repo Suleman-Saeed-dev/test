@@ -23,7 +23,7 @@ function Navbar() {
     <nav className="navbar">
       <div className="navbar-container">
         <Link to="/" className="navbar-logo" onClick={closeMenu}>
-          <span className="logo-text">Sarah Mitchell</span>
+          <span className="logo-text">Sawaira Maroof</span>
         </Link>
 
         <div className="menu-icon" onClick={toggleMenu}>

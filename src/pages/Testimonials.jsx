@@ -4,51 +4,51 @@ import './Testimonials.css';
 function Testimonials() {
   const testimonials = [
     {
-      name: 'Michael Chen',
+      name: 'Richvara',
       position: 'Marketing Director',
       company: 'TechFlow Solutions',
       rating: 5,
-      text: 'Sarah transformed our content strategy completely. Her writing not only sounds great but actually drives results. We saw a 150% increase in organic traffic within six months.',
+      text: 'We just had another wonderful delivery from Sawaira. Naturally following our ongoing success Sawaira we are preparing to release additional projects in queue.',
       image: 'https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=300'
     },
     {
-      name: 'Emma Rodriguez',
+      name: 'Ghadeer Majeed',
       position: 'Founder & CEO',
-      company: 'GreenLife Wellness',
+      company: 'GreIP',
       rating: 5,
-      text: 'Working with Sarah was a game-changer for our brand. She captured our voice perfectly and created content that truly resonates with our audience. Her professionalism and attention to detail are outstanding.',
+      text: 'We\'ve been working with Sawaira for several months now, and they consistently deliver high-quality work. Their writing is professional, well-researched, and always meets our requirements. Communication is excellent, deadlines are always met, and they have become a trusted part of our content strategy. Highly recommend for anyone looking for a dependable, skilled writer!',
       image: 'https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=300'
     },
     {
-      name: 'David Thompson',
+      name: 'Norman',
       position: 'Product Manager',
       company: 'CloudSync Inc.',
       rating: 5,
-      text: 'Sarah has an incredible ability to take complex technical concepts and make them accessible. Her blog posts have helped us establish thought leadership in our industry.',
+      text: 'Thanks so much you did a fantastic job and I have already sent you some new work',
       image: 'https://images.pexels.com/photos/2182970/pexels-photo-2182970.jpeg?auto=compress&cs=tinysrgb&w=300'
     },
     {
-      name: 'Lisa Park',
+      name: 'Luna Xinran',
       position: 'Content Lead',
       company: 'Digital Ventures',
       rating: 5,
-      text: 'I\'ve worked with many writers, but Sarah stands out. She delivers on time, communicates clearly, and her work rarely needs revisions. She just gets it right the first time.',
+      text: 'Really Impressed by the quality of the work and the humble way of communication. It was nice working with you for the second time. Keep it up.',
       image: 'https://images.pexels.com/photos/2182978/pexels-photo-2182978.jpeg?auto=compress&cs=tinysrgb&w=300'
     },
     {
-      name: 'James Wilson',
+      name: 'Friedrich',
       position: 'E-commerce Director',
       company: 'StyleHub',
       rating: 5,
-      text: 'Sarah\'s product descriptions have directly impacted our conversion rates. She knows how to write copy that sells while maintaining our brand\'s authentic voice.',
+      text: 'Did really good work,looking forward to work with you again',
       image: 'https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg?auto=compress&cs=tinysrgb&w=300'
     },
     {
-      name: 'Rachel Kim',
+      name: 'Logan Hudson',
       position: 'VP of Marketing',
       company: 'FinanceFirst',
       rating: 5,
-      text: 'Sarah\'s case studies and whitepapers have become our most valuable marketing assets. Her ability to tell compelling stories backed by data is exceptional.',
+      text: 'She understand my work and provided by professional work.',
       image: 'https://images.pexels.com/photos/1181686/pexels-photo-1181686.jpeg?auto=compress&cs=tinysrgb&w=300'
     }
   ];
@@ -83,14 +83,14 @@ function Testimonials() {
                 </div>
                 <p className="testimonial-text">{testimonial.text}</p>
                 <div className="testimonial-author">
-                  <img
+                  {/* <img
                     src={testimonial.image}
                     alt={testimonial.name}
                     className="author-image"
-                  />
+                  /> */}
                   <div className="author-info">
                     <h4>{testimonial.name}</h4>
-                    <p>{testimonial.position}</p>
+                    {/* <p>{testimonial.position}</p> */}
                     <p className="company-name">{testimonial.company}</p>
                   </div>
                 </div>
@@ -106,11 +106,11 @@ function Testimonials() {
             <h2>Trusted by Businesses Worldwide</h2>
             <div className="stats-row">
               <div className="stat-item">
-                <h3>98%</h3>
+                <h3>100%</h3>
                 <p>Client Satisfaction Rate</p>
               </div>
               <div className="stat-item">
-                <h3>95%</h3>
+                <h3>100%</h3>
                 <p>Repeat Client Rate</p>
               </div>
               <div className="stat-item">

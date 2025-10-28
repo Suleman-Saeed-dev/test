@@ -2,27 +2,33 @@ import "./About.css";
 
 function About() {
   const milestones = [
-    {
-      year: "2016",
-      title: "Started Freelancing",
-      description: "Began my journey as a content writer",
-    },
-    {
-      year: "2018",
-      title: "First Major Client",
-      description: "Landed a Fortune 500 tech company",
-    },
-    {
-      year: "2020",
-      title: "Specialized in B2B",
-      description: "Focused on B2B SaaS content strategy",
-    },
-    {
-      year: "2023",
-      title: "Published Author",
-      description: "Released guide on content marketing",
-    },
-  ];
+  {
+    year: "2020",
+    title: "Joined Emenac Ltd",
+    description: "Started my professional career as a content writer at Emenac Ltd, gaining hands-on experience in SEO and brand content.",
+  },
+  {
+    year: "2022",
+    title: "Joined TechBPO",
+    description: "Expanded my expertise in digital marketing and technical writing while managing multiple client projects at TechBPO.",
+  },
+  {
+    year: "2023",
+    title: "Started Freelancing",
+    description: "Transitioned into full-time freelancing, collaborating with international clients on diverse content projects.",
+  },
+  {
+    year: "2023",
+    title: "Specialized in B2B Content Strategy",
+    description: "Focused on helping B2B and SaaS companies build effective content strategies that drive conversions.",
+  },
+  {
+    year: "2023",
+    title: "Published Author",
+    description: "Released an in-depth guide on content marketing and personal branding for freelancers.",
+  },
+];
+
 
   return (
     <div className="about">
@@ -32,7 +38,7 @@ function About() {
             <div className="about-image">
               <img
                 src="https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=800"
-                alt="Sarah Mitchell"
+                alt="Sawaira Maroof"
               />
             </div>
             <div className="about-text">
@@ -41,11 +47,8 @@ function About() {
                 A Storyteller at Heart, A Strategist in Practice
               </h3>
               <p>
-                With over 5 years of experience in content writing, I've helped
-                businesses across tech, finance, healthcare, and lifestyle
-                industries find their voice and connect with their audiences. My
-                approach combines creativity with data-driven strategy to
-                deliver content that not only engages but converts.
+               I am Sawaira Maroof, a professional SEO Content Writer with 4+ years of experience in search-optimized content that ranks, 
+               drives traffic, and boosts conversions.
               </p>
               <p>
                 I believe that great content starts with understanding. Whether

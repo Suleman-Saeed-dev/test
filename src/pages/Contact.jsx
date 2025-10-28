@@ -1,13 +1,13 @@
-import { useState } from 'react';
-import { Mail, Linkedin, Twitter, MapPin, Send } from 'lucide-react';
-import './Contact.css';
+import { useState } from "react";
+import { Mail, BriefcaseBusiness, MapPin, Send } from "lucide-react";
+import "./Contact.css";
 
 function Contact() {
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    subject: '',
-    message: ''
+    name: "",
+    email: "",
+    subject: "",
+    message: "",
   });
 
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -15,18 +15,25 @@ function Contact() {
   const handleChange = (e) => {
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value
+      [e.target.name]: e.target.value,
     });
   };
 
   const handleSubmit = (e) => {
-    e.preventDefault();
-    setIsSubmitted(true);
-    setTimeout(() => {
-      setFormData({ name: '', email: '', subject: '', message: '' });
-      setIsSubmitted(false);
-    }, 3000);
-  };
+  e.preventDefault();
+  setIsSubmitted(true);
+
+  const emailTo = "sawairamaroof61@gmail.com";
+  const subject = encodeURIComponent(formData.subject);
+  const body = encodeURIComponent(
+    `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`
+  );
+
+  // ✅ Open Gmail compose window directly
+  const gmailURL = `https://mail.google.com/mail/?view=cm&fs=1&to=${emailTo}&su=${subject}&body=${body}`;
+  
+  window.open(gmailURL, "_blank");
+};
 
   return (
     <div className="contact">
@@ -34,7 +41,8 @@ function Contact() {
         <div className="container">
           <h1>Let's Work Together</h1>
           <p className="hero-description">
-            Ready to elevate your content? Get in touch and let's create something powerful together.
+            Ready to elevate your content? Get in touch and let's create
+            something powerful together.
           </p>
         </div>
       </section>
@@ -45,7 +53,9 @@ function Contact() {
             <div className="contact-info">
               <h2>Get In Touch</h2>
               <p className="contact-intro">
-                Whether you have a project in mind, need a content consultation, or just want to say hello, I'd love to hear from you. I typically respond within 24 hours.
+                Whether you have a project in mind, need a content consultation,
+                or just want to say hello, I'd love to hear from you. I
+                typically respond within 24 hours.
               </p>
 
               <div className="contact-methods">
@@ -55,7 +65,13 @@ function Contact() {
                   </div>
                   <div className="method-info">
                     <h4>Email</h4>
-                    <a href="mailto:hello@sarahmitchell.com">hello@sarahmitchell.com</a>
+                    <a
+                      href="https://mail.google.com/mail/?view=cm&fs=1&to=sawairamaroof61@gmail.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      sawairamaroof61@gmail.com
+                    </a>
                   </div>
                 </div>
 
@@ -65,24 +81,34 @@ function Contact() {
                   </div>
                   <div className="method-info">
                     <h4>Location</h4>
-                    <p>San Francisco, CA</p>
-                    <p className="timezone">Available globally via remote work</p>
+                    <p>Lahore, Pakistan</p>
+                    <p className="timezone">
+                      Available globally via remote work
+                    </p>
                   </div>
                 </div>
 
                 <div className="contact-method">
                   <div className="method-icon">
-                    <Linkedin size={24} />
+                    <BriefcaseBusiness size={24} />
                   </div>
                   <div className="method-info">
-                    <h4>Social Media</h4>
+                    <h4>Freelancer Platform</h4>
                     <div className="social-links">
-                      <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
-                        LinkedIn
+                      <a
+                href="https://www.fiverr.com/sawairamaroof"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        Fiverr
                       </a>
                       <span>•</span>
-                      <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
-                        Twitter
+                      <a
+                href="https://www.upwork.com/freelancers/sawaira"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        Upwork
                       </a>
                     </div>
                   </div>
@@ -96,7 +122,7 @@ function Contact() {
                   <span>Available for new projects</span>
                 </div>
                 <p>
-                  I'm currently accepting new clients for projects starting in the next month. Let's discuss your needs and timeline.
+                  I'm currently accepting new clients for projects. Let's discuss your needs and timeline.
                 </p>
               </div>
             </div>
@@ -157,7 +183,8 @@ function Contact() {
 
                 {isSubmitted ? (
                   <div className="success-message">
-                    Thank you! Your message has been sent. I'll get back to you soon.
+                    Thank you! Your message has been sent. I'll get back to you
+                    soon.
                   </div>
                 ) : (
                   <button type="submit" className="submit-btn">
@@ -178,25 +205,34 @@ function Contact() {
             <div className="faq-item">
               <h3>What's your turnaround time?</h3>
               <p>
-                Turnaround times vary depending on project scope. Blog posts typically take 3-5 business days, while larger projects like website copy or content strategies may take 2-3 weeks. Rush delivery is available for an additional fee.
+                Turnaround times vary depending on project scope. Blog posts
+                typically take 3-5 business days, while larger projects like
+                website copy or content strategies may take 2-3 weeks. Rush
+                delivery is available for an additional fee.
               </p>
             </div>
             <div className="faq-item">
               <h3>What's your pricing structure?</h3>
               <p>
-                I offer both per-project and hourly rates depending on the scope of work. After our initial consultation, I'll provide a detailed quote tailored to your specific needs and budget.
+                I offer both per-project and hourly rates depending on the scope
+                of work. After our initial consultation, I'll provide a detailed
+                quote tailored to your specific needs and budget.
               </p>
             </div>
             <div className="faq-item">
               <h3>Do you offer revisions?</h3>
               <p>
-                Yes! All projects include two rounds of revisions to ensure you're completely satisfied with the final deliverable. Additional revisions can be arranged if needed.
+                Yes! All projects include two rounds of revisions to ensure
+                you're completely satisfied with the final deliverable.
+                Additional revisions can be arranged if needed.
               </p>
             </div>
             <div className="faq-item">
               <h3>What industries do you specialize in?</h3>
               <p>
-                I have extensive experience in tech, SaaS, healthcare, finance, e-commerce, and lifestyle sectors. However, I'm always excited to learn about new industries and adapt my writing accordingly.
+                I have extensive experience in tech, SaaS, healthcare, finance,
+                e-commerce, and lifestyle sectors. However, I'm always excited
+                to learn about new industries and adapt my writing accordingly.
               </p>
             </div>
           </div>

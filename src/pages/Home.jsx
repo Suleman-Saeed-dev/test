@@ -16,7 +16,8 @@ function Home() {
                 Crafting stories that connect and convert
               </p>
               <p className="hero-description fade-in-delay-2">
-                Hi, I'm Sarah Mitchell, a content writer who specializes in creating compelling narratives that resonate with audiences and deliver measurable results for businesses.
+I am Sawaira Maroof, a professional SEO Content Writer with 4+ years of experience in
+search-optimized content that ranks, drives traffic, and boosts conversions.
               </p>
               <div className="hero-buttons fade-in-delay-3">
                 <Link to="/portfolio" className="btn btn-primary">
@@ -44,19 +45,19 @@ function Home() {
         <div className="container">
           <div className="stats-grid">
             <div className="stat-card">
-              <h3 className="stat-number">8+</h3>
+              <h3 className="stat-number">4+</h3>
               <p className="stat-label">Years Experience</p>
             </div>
             <div className="stat-card">
-              <h3 className="stat-number">200+</h3>
+              <h3 className="stat-number">20+</h3>
               <p className="stat-label">Projects Completed</p>
             </div>
             <div className="stat-card">
-              <h3 className="stat-number">50+</h3>
+              <h3 className="stat-number">20+</h3>
               <p className="stat-label">Happy Clients</p>
             </div>
             <div className="stat-card">
-              <h3 className="stat-number">15+</h3>
+              <h3 className="stat-number">7+</h3>
               <p className="stat-label">Industries Served</p>
             </div>
           </div>

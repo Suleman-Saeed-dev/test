@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
-import { Linkedin, Twitter, Mail, Instagram } from 'lucide-react';
+import { Linkedin, Mail } from 'lucide-react';
+import { SiUpwork, SiFiverr } from 'react-icons/si';
 import './Footer.css';
 
 function Footer() {
@@ -10,7 +11,7 @@ function Footer() {
       <div className="footer-container">
         <div className="footer-content">
           <div className="footer-section">
-            <h3 className="footer-logo">Sarah Mitchell</h3>
+            <h3 className="footer-logo">Sawaira Maroof</h3>
             <p className="footer-tagline">
               Crafting stories that connect and convert
             </p>
@@ -30,35 +31,38 @@ function Footer() {
           <div className="footer-section">
             <h4>Connect</h4>
             <div className="social-icons">
+
               <a
-                href="https://linkedin.com"
+                href="https://linkedin.com/in/sawaira-maroof"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="LinkedIn"
               >
                 <Linkedin size={20} />
               </a>
+            
               <a
-                href="https://twitter.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Twitter"
-              >
-                <Twitter size={20} />
-              </a>
-              <a
-                href="https://instagram.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Instagram"
-              >
-                <Instagram size={20} />
-              </a>
-              <a
-                href="mailto:hello@sarahmitchell.com"
+                href="mailto:sawairamaroof61@gmail.com"
                 aria-label="Email"
               >
                 <Mail size={20} />
+              </a>
+
+                             <a
+                href="https://www.fiverr.com/sawairamaroof"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Fiverr"
+              >
+                <SiFiverr size={20} />
+              </a>
+              <a
+                href="https://www.upwork.com/freelancers/sawaira"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Upwork"
+              >
+                <SiUpwork size={20} />
               </a>
             </div>
           </div>
@@ -82,7 +86,7 @@ function Footer() {
         </div>
 
         <div className="footer-bottom">
-          <p>&copy; {currentYear} Sarah Mitchell. All rights reserved.</p>
+          <p>&copy; {currentYear} Sawaira Maroof. All rights reserved.</p>
         </div>
       </div>
     </footer>

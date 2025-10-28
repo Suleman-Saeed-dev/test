@@ -5,90 +5,74 @@ import './Portfolio.css';
 function Portfolio() {
   const [activeFilter, setActiveFilter] = useState('all');
 
-  const categories = ['all', 'Tech', 'Lifestyle', 'B2B', 'SEO'];
+  const categories = ['all', 'Tech', 'Guide', 'SEO', 'Digital Marketing' ];
 
   const portfolioItems = [
     {
-      title: 'Building a Strong SaaS Content Marketing Strategy',
-      category: 'B2B',
+      title: 'Will AI Replace CAD Drafters in 2025? Expert Analysis, Job Outlook And Career Tips',
+      category: 'Technology',
+      type: 'Article',
+      description: 'Will AI replace CAD drafters? I don’t think so, not fully, not in 2025. Yet the ground is shifting beneath our mouse cursors.',
+      client: 'CAD Drafters',
+      link: 'https://caddrafter.us/will-ai-replace-cad-drafters-in-2025/',
+      image: 'https://caddrafter.us/storage/2025/10/Will-AI-replace-CAD-drafters-845x321.webp'
+    },
+    {
+      title: '5 Important Design Considerations for the Doors in Commercial Construction',
+      category: 'Guide',
+      type: 'Blog',
+      description: 'In the fast-paced world of commercial construction, even the smallest design choices can shape the success of a project and doors are no exception.',
+      client: 'CAD Drafters',
+      link: 'https://caddrafter.us/design-for-doors-in-commercial-construction/',
+      image: "https://caddrafter.us/storage/2025/10/Doors-in-Commercial-Construction-845x321.webp"
+    },
+    {
+      title: 'How Much Does Drywall Installation Cost in 2025?',
+      category: 'Construction',
+      type: 'Cost Guide',
+      description: 'The average cost of drywall installation in 2025 is $1.50-$3.50 per sq ft, though it can vary widely, and is influenced by so many factors, such as materials, labor etc',
+      client: 'USA Estimators',
+      link: 'https://estimators.us/drywall-installation-cost/',
+      image: 'https://estimators.us/wp-content/uploads/2025/10/Does-Drywall-Installation--845x321.webp'
+    },
+    {
+      title: 'How to Delete Photos from Google Business Profile?',
+       category: 'Digital Marketing',
       type: 'article',
-      description: 'A comprehensive guide for B2B SaaS companies on developing effective content marketing strategies.',
-      client: 'TechStart Magazine',
-      link: '#',
-      image: 'https://images.pexels.com/photos/7688336/pexels-photo-7688336.jpeg?auto=compress&cs=tinysrgb&w=800'
+      description: 'Customers prefer to purchase from businesses with good Google business profiles. With good GMB, the chances of a purchase increase by 50 percent.',
+      client: 'Digital Insides',
+      link: 'https://digitalinsides.com/how-to-delete-photos-from-google-business-profile/',
+      image: 'https://digitalinsides.com/storage/2024/07/delete-photos-on-google-business-profile.png'
     },
     {
-      title: '10 Wellness Habits That Changed My Life',
-      category: 'Lifestyle',
+      title: 'Clickfunnels vs WordPress: Which is the Better Platform',
+      category: 'Digital Marketing',
       type: 'article',
-      description: 'Personal development article exploring transformative daily wellness practices.',
-      client: 'Wellness Today',
-      link: '#',
-      image: 'https://images.pexels.com/photos/3822621/pexels-photo-3822621.jpeg?auto=compress&cs=tinysrgb&w=800'
-    },
-    {
-      title: 'AI in Healthcare: Opportunities and Challenges',
-      category: 'Tech',
-      type: 'article',
-      description: 'In-depth analysis of artificial intelligence applications in modern healthcare.',
-      client: 'HealthTech Insights',
-      link: '#',
-      image: 'https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=800'
-    },
-    {
-      title: 'Complete SEO Guide for Small Businesses',
-      category: 'SEO',
-      type: 'pdf',
-      description: 'Downloadable guide covering essential SEO strategies for small business owners.',
-      client: 'Growth Marketing Hub',
-      link: '#',
-      image: 'https://images.pexels.com/photos/265087/pexels-photo-265087.jpeg?auto=compress&cs=tinysrgb&w=800'
-    },
-    {
-      title: 'Product Launch Case Study: From Zero to Hero',
-      category: 'B2B',
-      type: 'pdf',
       description: 'Detailed case study documenting a successful product launch campaign.',
-      client: 'StartUp Success',
-      link: '#',
-      image: 'https://images.pexels.com/photos/3183153/pexels-photo-3183153.jpeg?auto=compress&cs=tinysrgb&w=800'
+      client: 'Digital Insides',
+      link: 'https://digitalinsides.com/clickfunnels-vs-wordpress/',
+      image: 'https://digitalinsides.com/storage/2024/04/clickfunnels-vs-wordpress.svg'
     },
     {
-      title: 'The Future of Remote Work Technology',
+      title: 'Using IP Geolocation to Prevent Location Spoofing in Online Transactions',
       category: 'Tech',
       type: 'article',
-      description: 'Exploring emerging technologies shaping the future of distributed teams.',
-      client: 'Future of Work',
-      link: '#',
-      image: 'https://images.pexels.com/photos/4226140/pexels-photo-4226140.jpeg?auto=compress&cs=tinysrgb&w=800'
+      description: 'Location spoofing poses a threat to businesses in online transactions. IP geolocation tools can help verify user locations in real time to prevent fraud.',
+      client: 'GreIP',
+      link: 'https://greip.io/blog/Using-IP-Geolocation-to-Prevent-Location-Spoofing-in-Online-Transactions-54',
+      image: 'https://greip.io/cdn-cgi/imagedelivery/pdp_3cpmadz4IMGFlvUzaw/98deb8fd-1f7b-4f36-be63-2d6cf468c300/public'
     },
     {
-      title: 'Sustainable Living: A Practical Guide',
-      category: 'Lifestyle',
+      title: 'How to Choose the Right IP Geolocation API for Your Business + Free Checklist',
+      category: 'Tech',
       type: 'article',
-      description: 'Actionable tips for incorporating sustainability into everyday life.',
-      client: 'Green Living Magazine',
-      link: '#',
-      image: 'https://images.pexels.com/photos/6591358/pexels-photo-6591358.jpeg?auto=compress&cs=tinysrgb&w=800'
+      description: 'Choosing the right IP geolocation API is critical for fraud prevention and user experience, especially with rising e-commerce fraud.',
+      client: 'GreIP',
+      link: 'https://greip.io/blog/How-to-Choose-the-Right-IP-Geolocation-API-for-Your-Business-Free-Checklist-229',
+      image: 'https://greip.io/cdn-cgi/imagedelivery/pdp_3cpmadz4IMGFlvUzaw/57efb731-3abf-4f73-62f9-7b1ffd870b00/public'
     },
-    {
-      title: 'SEO Content Strategy Playbook',
-      category: 'SEO',
-      type: 'pdf',
-      description: 'Step-by-step framework for building and executing an SEO content strategy.',
-      client: 'Digital Marketing Pro',
-      link: '#',
-      image: 'https://images.pexels.com/photos/270637/pexels-photo-270637.jpeg?auto=compress&cs=tinysrgb&w=800'
-    },
-    {
-      title: 'E-commerce Platform Comparison Guide',
-      category: 'B2B',
-      type: 'article',
-      description: 'Comprehensive comparison of leading e-commerce platforms for businesses.',
-      client: 'E-commerce Weekly',
-      link: '#',
-      image: 'https://images.pexels.com/photos/230544/pexels-photo-230544.jpeg?auto=compress&cs=tinysrgb&w=800'
-    }
+   
+    
   ];
 
   const filteredItems = activeFilter === 'all'
@@ -126,7 +110,7 @@ function Portfolio() {
                 <div className="portfolio-image">
                   <img src={item.image} alt={item.title} />
                   <div className="portfolio-overlay">
-                    <a href={item.link} className="view-link">
+                    <a href={item.link} target='_blank' className="view-link">
                       {item.type === 'pdf' ? <FileText size={24} /> : <ExternalLink size={24} />}
                       <span>{item.type === 'pdf' ? 'Download' : 'Read Article'}</span>
                     </a>
